@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>ukm-detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+  
+
+        <ion-card *ngFor="let u_terpilih of UKM_fetched"  >
+            <ion-card-header>
+                <img src="{{u_terpilih.img_url}}"/>
+              <ion-card-title >{{u_terpilih.title}}</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content>
+                {{u_terpilih.desc}}
+            </ion-card-content>
+          </ion-card>
+        <ion-button (click)="gabung(u_terpilih)">
+          Mau?
+        </ion-button>
+      
+      </ion-list>
+
+          
+</ion-content>
